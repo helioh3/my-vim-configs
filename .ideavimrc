@@ -10,18 +10,73 @@ noremap l k
 " right
 noremap ; l
 
-" move to the  character occurrence
+" leader key
+let mapleader = ' '
+
+" move to the next character occurrence
 noremap ' ;
 
-" redio
+" redo
 noremap U <C-r>
 
-" map black whole regiister
-noremap \ "
+" map black whole register
+noremap \ "_
 
-" past over whithouwt overwiriting default regiister
-
+" paste over without overwriting default register
 xnoremap p P
 
 " sync Vim clipboard with OS clipboard
 set clipboard^=unnamed,unnamedplus
+
+" jump between angle brackets
+set matchpairs+=<:>
+
+" smart line joining
+set ideajoin
+
+" open config
+noremap <leader>cc :edit ~/.ideavimrc<cr>
+
+" source config
+noremap <leader>cs :source ~/.ideavimrc<cr>:nohlsearch<cr>
+
+" highlight search results
+set hlsearch
+
+" remove search highlights
+nnoremap <Esc> :nohlsearch<cr>
+
+" case-insensitive search
+set ignorecase
+
+" enable case-sensitive search when uppercased letter is present
+set smartcase
+
+" search while typing
+set incsearch
+
+" consider camelCase and snake_case words when jumping between words
+
+" move to the beginning of the next word
+map w [w
+
+" move to the end of the next word
+map e ]w
+
+" move to the beginning of the previous word
+map b [b
+
+" move to the end of the previous word
+map ge ]b
+
+" go to the left split
+map <A-j> <C-w>h
+
+" go to the bottom split
+map <A-k> <C-w>j
+
+" go to the top split
+map <A-l> <C-w>k
+
+" go to the right split
+map <A-;> <C-w>l
