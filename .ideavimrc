@@ -10,8 +10,18 @@ noremap l k
 " right
 noremap ; l
 
-" move to the next character occurrence
+" move to the  character occurrence
 noremap ' ;
 
-" redo
+" redio
 noremap U <C-r>
+
+" map black whole regiister
+noremap \ "
+
+" past over whithouwt overwiriting default regiister
+
+xnoremap p P
+
+" sync Vim clipboard with OS clipboard
+set clipboard^=unnamed,unnamedplus
